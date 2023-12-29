@@ -2,6 +2,7 @@ import React from "react";
 import familyData from "./familyData";
 import QRCode from "qrcode.react";
 import "./App.css";
+import BASE_URL from "./AppConfig";
 
 const App = () => { 
 
@@ -28,7 +29,7 @@ const App = () => {
               <td>{member.relationship}</td>
               <td>{member.gender}</td>
               <td>
-              <QRCode value={`http://localhost:3001/details/${member.id}`} style={{ marginRight: 50 }} />
+              <QRCode value={`${BASE_URL}/${member.id}`} style={{ marginRight: 50 }} />
               </td>
             </tr>
           ))}
